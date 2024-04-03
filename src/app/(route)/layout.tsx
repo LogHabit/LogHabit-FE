@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import StyledComponentsRegistry from "./registry";
+import "../globals.css";
+import StyledComponentsRegistry from "../registry";
+import Button from "../_components/atom/button/Button";
+import Header from "./_components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <Header></Header>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
